@@ -1,0 +1,476 @@
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, , user-scalable=no, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link rel="apple-touch-icon" sizes="58x58" href="/icon/58.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/icon/76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon/152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/180.png" />
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>Eintracht Tor</title>
+</head>
+<style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+        color: white;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    body {
+        background-color: #17273E;
+    }
+
+    #ipvstream {
+        position: absolute;
+        width: 100vw;
+        z-index: 5;
+    }
+
+    #container {
+        position: absolute;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .readyState {
+        position: absolute;
+        z-index: 11;
+        width: 25px;
+        height: 25px;
+        top: 0px;
+        right: 0px;
+        font-size: 20px;
+        padding-top: 7px;
+    }
+
+    h1 {
+        padding: 1em;
+    }
+
+    .btn-grp {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 33.3333% 33.3333% 33.3333%;
+    }
+
+    .admin-grp {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2em;
+        background-color: #17273E;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .door {
+        background-color: #F99A54;
+    }
+
+    .gate {
+        background-color: #698255;
+    }
+
+    .btn {
+        padding: 1em;
+        margin: 1em;
+        background-color: #224952;
+        user-select: none;
+        /* supported by Chrome and Opera */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+    }
+
+    .btn:active {
+        background-color: tomato;
+    }
+
+    .clock {
+        border-radius: 100%;
+        background: #ffffff;
+        font-family: "Montserrat";
+        border: 5px solid white;
+        box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .indicatorsWrapper {
+        display: flex;
+        height: 100%;
+    }
+
+    .wrapDoor {
+        overflow: hidden;
+        position: relative;
+        /* background-color: beige; */
+        width: 34%;
+        z-index: 6;
+    }
+
+    .openingIndicatorDoor {
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        margin: auto;
+        /* top: -26%; */
+        left: 6px;
+        bottom: 0px;
+        /* right: 0; */
+        border-radius: 4px;
+        background: #3A986C;
+        transform-origin: bottom left;
+        transform: rotate(0deg);
+        z-index: 2;
+    }
+
+    .dotDoor {
+        position: absolute;
+        left: -6px;
+        bottom: -6px;
+        width: 12px;
+        height: 12px;
+        background: #3A986C;
+        border: 3px solid #c2c2c2;
+        border-radius: 100px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .wrapGate {
+        overflow: hidden;
+        position: relative;
+        width: 66%;
+        z-index: 6;
+    }
+
+    .openingIndicatorGate {
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        margin: auto;
+        right: 4px;
+        bottom: 0px;
+        border-radius: 4px;
+        background: #3A986C;
+        transform-origin: bottom right;
+        transform: rotate(0deg);
+        z-index: 2;
+    }
+
+    @keyframes animateGate {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    .dotGate {
+        position: absolute;
+        right: -6px;
+        bottom: -6px;
+        width: 12px;
+        height: 12px;
+        background: #3A986C;
+        border: 3px solid #c2c2c2;
+        border-radius: 100px;
+        margin: auto;
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div class="readyState">❌</div>
+    <img id="CamPic" name="CamPic" src="http://mobotix.eintracht/control/faststream.jpg?stream=full&amp;fps=16.0"
+        style="width:100%;">
+    <div id="container">
+        <div class="indicatorsWrapper">
+            <div class="wrapDoor">
+                <span class="openingIndicatorDoor"></span>
+                <span class="dotDoor"></span>
+            </div>
+            <div class="wrapGate">
+                <span class="openingIndicatorGate"></span>
+                <span class="dotGate"></span>
+            </div>
+        </div>
+        <div class="admin-grp hidden">
+            <div class="btn manual" data-id="10" data-on="2" data-off="8">door open</div>
+            <div class="btn manual" data-id="12" data-on="3" data-off="8">door close</div>
+            <div class="btn manual" data-id="13" data-on="4" data-off="8">gate open</div>
+            <div class="btn manual" data-id="14" data-on="5" data-off="8">gate close</div>
+            <div class="btn automatic" data-id="15" data-on="15">reset</div>
+        </div>
+        <div class="btn-grp door">
+            <div class="btn automatic" data-id="1" data-on="0">Tür öffnen</div>
+            <div class="btn automatic" data-id="2" data-on="8">STOP</div>
+            <div class="btn automatic" data-id="3" data-on="1">Tür schließen</div>
+        </div>
+        <div class="btn-grp gate">
+            <div class="btn automatic" data-id="1" data-on="6">Tor öffnen</div>
+            <div class="btn automatic" data-id="2" data-on="8">STOP</div>
+            <div class="btn automatic" data-id="3" data-on="7">Tor schließen</div>
+        </div>
+    </div>
+</body>
+<script language="javascript" type="text/javascript">
+    const host = "Tor.eintracht"
+    const wsUri = `ws://${host}/ws`;
+    var connection = new WebSocket(wsUri);
+    let adminMode = location.toString().includes("#elmcrest");
+
+    let openingIndicatorDoor = document.querySelector(".openingIndicatorDoor");
+    let openingIndicatorGate = document.querySelector(".openingIndicatorGate");
+
+    let trackMouseDownOrMouseLeave = {};
+    document.querySelectorAll(".manual").forEach(function (btn) {
+        createEventListeners(btn);
+    });
+    document.querySelectorAll(".automatic").forEach(function (btn) {
+        createEventListeners(btn);
+    });
+
+    const buf = new ArrayBuffer(1); // 1 byte sized array buffer to send arbitrary binary data (container)
+    const view = new Uint8Array(buf); // integer array as the view (again container)
+    function sendBytes(payload) {
+        view[0] = payload;
+        connection.send(new Blob([buf], { type: "application/octetstream" }));
+    }
+    function createEventListeners(btn) {
+        dataOff = parseInt(btn.dataset.off); // surveillance of mouseLeave state (trackMouseDownOrMouseLeave)
+        btn.addEventListener("mousedown", function (event) {
+            event.preventDefault();
+            trackMouseDownOrMouseLeave[btn.dataset.id] = true;
+            sendBytes(parseInt(btn.dataset.on));
+        });
+        btn.addEventListener("touchstart", function (event) {
+            event.preventDefault();
+            sendBytes(parseInt(btn.dataset.on));
+        });
+        if (btn.classList.contains("manual")) {
+            btn.addEventListener("mouseup", function (event) {
+                event.preventDefault();
+                sendBytes(parseInt(btn.dataset.off));
+                trackMouseDownOrMouseLeave[btn.dataset.id] = false;
+            });
+            btn.addEventListener("mouseleave", function (event) {
+                if (trackMouseDownOrMouseLeave[btn.dataset.id]) {
+                    event.preventDefault();
+                    sendBytes(parseInt(btn.dataset.off));
+                }
+                trackMouseDownOrMouseLeave[btn.dataset.id] = false;
+            });
+            btn.addEventListener("touchend", function (event) {
+                event.preventDefault();
+                sendBytes(parseInt(btn.dataset.off));
+            });
+        }
+    };
+    if (adminMode) {
+        document.querySelector(".admin-grp").classList.remove("hidden");
+        // document.querySelectorAll(".setInterval").forEach( function(btn) {
+        //     btn.addEventListener("click", function(event) {
+        //         event.preventDefault();
+        //         var value = prompt(`Set interval for ${btn.dataset.side} [milliseconds].`, "10000");
+        //         if (value != null) {
+        //             location.replace(`http://${host}/setInterval?${btn.dataset.side}=${value}`);
+        //         }
+        //     });
+        // });
+    }
+
+    connection.onopen = function () { setReadyStateIndicator() };
+    connection.onerror = function () { setReadyStateIndicator() };
+    connection.onclose = function () { setReadyStateIndicator() };
+
+    connection.onmessage = function (event) {
+        setReadyStateIndicator();
+        if (event.data.includes("deg-")) {
+            payload = event.data.split("-");
+            openingIndicatorDoor.style.transform = `rotate(-${payload[1]}deg)`;
+            openingIndicatorGate.style.transform = `rotate(${payload[2]}deg)`;
+
+        }
+        if (adminMode) {
+            console.log(`${event.data}`);
+        }
+    }
+
+    let readyStateIndicator = document.querySelector(".readyState");
+    function setReadyStateIndicator() {
+        if (connection.readyState === WebSocket.OPEN) {
+            readyStateIndicator.textContent = "✅";
+        } else {
+            readyStateIndicator.textContent = "❌";
+        }
+    }
+
+    document.addEventListener("visibilitychange", function () {
+
+        if (document.visibilityState === 'visible') {
+            connection = new WebSocket(wsUri);
+            document.querySelector("#CamPic").setAttribute("src", "http://mobotix.eintracht/control/faststream.jpg?stream=full&amp;fps=16.0");
+        }
+    });
+
+</script>
+
+</html>
